@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class='no-js'>
+  <!--<![endif]-->
+  <head>
+    <meta charset='utf-8' />
+    <meta content='width=device-width, initial-scale=1.0' name='viewport' />
+    <meta content='' name='description' />
+    <meta content='' name='author' />
+    <title>豆瓣</title>
+    <link href="{{ url_for('static', filename='framework.css') }}" media="screen" rel="stylesheet" type="text/css" />
+    <link href="{{ url_for('static', filename='style1.css') }}" media="screen" rel="stylesheet" type="text/css" />
+    <link href="{{ url_for('static', filename='style1.css') }}" media="screen" rel="stylesheet" type="text/css" />
+    <script src="javascripts/libs.js" type="text/javascript"></script>
+    <script src="javascripts/app.js" type="text/javascript"></script>
+    <script type='text/javascript'>
+      //<![CDATA[
+        // terrificjs bootstrap
+        (function($) {
+            $(document).ready(function() {
+                var $page = $('body');
+                var config = {
+                  dependencyPath: {
+                    plugin: 'javascripts/'
+                  }
+                }
+                var application = new Tc.Application($page, config);
+                application.registerModules();
+                application.start();
+            });
+        })(Tc.$);
+      //]]>
+    </script>
+  </head>
+  <body class='grey'>
+    <script type='text/javascript'>
+      //<![CDATA[
+        if(jQuery.url().param('screenshot')) {
+          jQuery('body').addClass('screenshot');
+        }
+      //]]>
+    </script>
+    <div id='header'>
+      <div class='row'>
+        <div class='twelve columns'>
+          <div class='mod modLogo'>
+            <h1><a href="index-2.html">豆瓣电影Top250</a></h1>
+            <h2 class='tagline'>
+              Show the top250 movies in 豆瓣
+            </h2>
+          </div>
+        </div>
+      </div>
+     
+    </div>
+    <div class="copyrights">Collect from <a href="http://www.cssmoban.com/"  title="网站模板">网站模板</a></div> 
+    <div id='main' role='main'>
+      <div class='mod modSlider stretch-bgs'>
+        <div class='backstretch-bgs'>
+          <img random_color_for_release="true" width="1460" height="700" alt="" src="static/slider_bg_1.jpg" />
+          <img random_color_for_release="true" width="1460" height="700" alt="" src="static/slider_bg_2.jpg" />
+          <img random_color_for_release="true" width="1800" height="700" alt="" src="static/slider_bg_5.jpg" />
+          <img random_color_for_release="true" width="1800" height="700" alt="" src="static/slider_bg_7.jpg" />
+          <img random_color_for_release="true" width="1500" height="700" alt="" src="static/slider_bg_9.jpg" />
+          <img random_color_for_release="true" width="1500" height="700" alt="" src="static/slider_bg_10.jpg" />
+          <img random_color_for_release="true" width="1400" height="700" alt="" src="static/slider_bg_14.jpg" />
+        </div>
+        
+        <div class='row'>
+          <div class='twelve columns'>
+            <div class='flexslider'>
+              <ul class='slides'>
+                
+                <li>
+                  <img width="948" height="590" alt="" src="static/slider_3.jpg" />
+                  <p class='flex-caption'><a href="/1">Show me the movies</a></p>
+                </li>
+                
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+     

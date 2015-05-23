@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class='no-js'>
+  <!--<![endif]-->
+  <head>
+    <meta charset='utf-8' />
+    <meta content='width=device-width, initial-scale=1.0' name='viewport' />
+    <meta content='' name='description' />
+    <meta content='' name='author' />
+    <title>豆瓣电影</title>
+   <link href="{{ url_for('static', filename='framework.css') }}" media="screen" rel="stylesheet" type="text/css" />
+    <link href="{{ url_for('static', filename='style1.css') }}" media="screen" rel="stylesheet" type="text/css" />
+    <link href="{{ url_for('static', filename='style1.css') }}" media="screen" rel="stylesheet" type="text/css" />
+    
+      <![CDATA[
+        // terrificjs bootstrap
+        (function($) {
+            $(document).ready(function() {
+                var $page = $('body');
+                var config = {
+                  dependencyPath: {
+                    plugin: 'javascripts/'
+                  }
+                }
+                var application = new Tc.Application($page, config);
+                application.registerModules();
+                application.start();
+            });
+        })(Tc.$);
+      //]]>
+    </script>
+  </head>
+  <body class='grey'>
+    <script type='text/javascript'>
+      //<![CDATA[
+        if(jQuery.url().param('screenshot')) {
+          jQuery('body').addClass('screenshot');
+        }
+      //]]>
+    </script>
+    <div id='header'>
+      <div class='row'>
+        <div class='twelve columns'>
+          <div class='mod modLogo'>
+            <h1><a href="index-2.html">豆瓣电影</a></h1>
+            <h2 class='tagline'>
+              豆瓣电影排行Top250
+            </h2>
+            <h2 class='tagline'>
+           <form action="{{ url_for('search') }}" method=post class="he">
+      <dl>
+        <input type=text size=30 name=title>
+        <input type=submit value=搜索>
+      </dl>
+    </form>
+        </h2>
+          </div>
+        </div>
+      </div>
+
+    <div id='main' role='main'>
+      <div class='bg-wrapper'>
+        
+      </div>
+      <div class='row'>
+        <div class='nine columns'>
+          <div class='main-content'>
+            <div class='mod modBlogPost'>
+              <div class='media'>
+                
+              </div>
+              <div class='meta'>
+                {% for movie in movies1 %}
+                <ul>
+                  <li>{{movie.year}}</li>
+                  <li>导演：{{movie.directors}}</li>
+                  <li>主演：{{movie.casts}}</li>
+                </ul>
+              </div>
+              <div class='content'>
+                
+                <h3><a href=/{{movie.title}}>{{movie.title}}</a></h3>
+                <p>{{movie.summary}}</p>
+                
+                <a class="read-more" href={{movie.url}}>详情..</a>
+                <div class='tags'>
+                  类型：
+                  {{movie.genres}}
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+            <div class='mod modBlogPost'>
+              <div class='media'>
+                
+              </div>
+              <div class='meta'>
+               {% for movie in movies2 %}
+                <ul>
+                  <li>{{movie.year}}</li>
+                  <li>导演：{{movie.directors}}</li>
+                  <li>主演：{{movie.casts}}</li>
+                  
+        
+                </ul>
+              </div>
+              <div class='content'>
+                
+                <h3><a href=/{{movie.title}}>{{movie.title}}</a></h3>
+                <p>{{movie.summary}}</p>
+                
+                <a class="read-more" href={{movie.url}}>详情..</a>
+                <div class='tags'>
+                  类型：
+                  {{movie.genres}}
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+            <div class='mod modBlogPost'>
+              <div class='meta'>
+                {% for movie in movies3 %}
+                <ul>
+                  <li>{{movie.year}}</li>
+                  <li>导演：{{movie.directors}}</li>
+                  <li>主演：{{movie.casts}}</li>
+                  
+        
+                </ul>
+              </div>
+              <div class='content'>
+                
+                <h3><a href=/{{movie.title}}>{{movie.title}}</a></h3>
+                <p>{{movie.summary}}</p>
+                
+                <a class="read-more" href={{movie.url}}>详情..</a>
+                <div class='tags'>
+                  类型：
+                  {{movie.genres}}
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+            <div class='mod modBlogPost'>
+              <div class='media'>
+                
+              </div>
+              <div class='meta'>
+                <ul>
+                 {% for movie in movies4 %}
+                <ul>
+                  <li>{{movie.year}}</li>
+                  <li>导演：{{movie.directors}}</li>
+                  <li>主演：{{movie.casts}}</li>
+                  
+        
+                </ul>
+              </div>
+              <div class='content'>
+                
+               <h3><a href=/{{movie.title}}>{{movie.title}}</a></h3>
+                <p>{{movie.summary}}</p>
+                
+                <a class="read-more" href={{movie.url}}>详情..</a>
+                <div class='tags'>
+                  类型：
+                  {{movie.genres}}
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+            <div class='mod modBlogPost'>
+              <div class='media'>
+                
+              </div>
+              <div class='meta'>
+                 {% for movie in movies5 %}
+                <ul>
+                  <li>{{movie.year}}</li>
+                  <li>导演：{{movie.directors}}</li>
+                  <li>主演：{{movie.casts}}</li>
+                  
+        
+                </ul>
+              </div>
+              <div class='content'>
+                
+                <h3><a href=/{{movie.title}}>{{movie.title}}</a></h3>
+                <p>{{movie.summary}}</p>
+                
+                <a class="read-more" href={{movie.url}}>详情..</a>
+                <div class='tags'>
+                  类型：
+                  {{movie.genres}}
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+            <div class='mod modPager'>
+              <a class="older" href="/back">上一页</a>
+              <a class="newer" href="/next">下一页</a>
+            </div>
+          </div>
+        </div>
+       
+          
+        
